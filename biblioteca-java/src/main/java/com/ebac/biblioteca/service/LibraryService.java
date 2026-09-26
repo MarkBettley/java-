@@ -15,14 +15,14 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.stream.Collectors;
 
-public class Library {
+public class LibraryService {
 
     private final List<Book> books;
     private final Map<String, Author> authors;
     private final Map<String, User> users;
     private final Queue<String> loanRequests;
 
-    public Library() {
+    public LibraryService() {
         this.books = new ArrayList<>();
         this.authors = new HashMap<>();
         this.users = new HashMap<>();

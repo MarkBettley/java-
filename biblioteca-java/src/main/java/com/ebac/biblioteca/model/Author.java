@@ -5,16 +5,30 @@ import java.util.List;
 
 public class Author {
 
+    private Long id;
     private String firstName;
     private String lastName;
     private String biography;
     private List<Book> publishedBooks;
 
     public Author(String firstName, String lastName, String biography) {
+        this(null, firstName, lastName, biography);
+    }
+
+    public Author(Long id, String firstName, String lastName, String biography) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.biography = biography;
         this.publishedBooks = new ArrayList<>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {

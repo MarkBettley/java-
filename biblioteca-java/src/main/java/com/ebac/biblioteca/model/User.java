@@ -5,16 +5,30 @@ import java.util.List;
 
 public class User {
 
+    private Long id;
     private String name;
     private String email;
     private String password;
     private List<Book> borrowedBooks;
 
     public User(String name, String email, String password) {
+        this(null, name, email, password);
+    }
+
+    public User(Long id, String name, String email, String password) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.borrowedBooks = new ArrayList<>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

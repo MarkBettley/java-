@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.ebac'
-version = '1.0.0'
+version = '2.0.0'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -15,8 +15,21 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    // JDBC - MySQL
+    implementation 'com.mysql:mysql-connector-j:8.4.0'
+
+    // JUnit 5
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
 application {
     mainClass = 'com.ebac.biblioteca.Main'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 tasks.withType(JavaCompile).configureEach {
