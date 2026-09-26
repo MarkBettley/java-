@@ -101,7 +101,7 @@ ORDER BY pedidos.id_pedido;
 -- ============================================
 
 CREATE USER 'usuario_tienda'@'localhost'
-IDENTIFIED BY 'Ebac2026!';
+IDENTIFIED BY 'tu_password!';
 
 GRANT SELECT, INSERT, UPDATE
 ON tienda.*
